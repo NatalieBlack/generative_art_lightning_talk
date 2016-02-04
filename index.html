@@ -1,411 +1,433 @@
-<!doctype html>
-<html lang="en">
+<html>
+  <head>
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/white.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-background="#CDFBF9">
+          <section>
+            <h2>What is generative art?</h2>
+              <blockquote cite="wikipedia" class="fragment" data-fragment-index="1">
+              art that in whole or in part has been created with the use of an autonomous system
+              - wikipedia
+              </blockquote>
+              <blockquote cite="Philip Galanter" class="fragment" data-fragment-index="2">
+            any art practice where the artist creates a process, such as a set of natural language rules, a computer program, a machine, or other procedural invention, which is then set into motion with some degree of autonomy contributing to or resulting in a completed work of art
+            - Philip Galanter
+              </blockquote>
+              <blockquote cite="eu-gene" class="fragment" data-fragment-index="3">
+                "Generative" is where you lose control of a machine which does exactly what you tell it.
+                – eu-gene
+              </blockquote>
 
-	<head>
-		<meta charset="utf-8">
+          </section>
 
-		<title>reveal.js – The HTML Presentation Framework</title>
+          <section>
+            <img src="googleresults.png" alt="google image results for generative art" class="googleresults">
+          </section>
+        </section>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+        <section data-background="#CDFBF9">
+          <section>
+            <h2>What is Processing?</h2>
+            <img src="processing-logo.png" alt="processing logo" class="plogo">
 
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+            </section>
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+            <section>
+              <h3>Options</h3>
+              <ul>
+                <li> original Java-based Processing </li>
+                <li> Processing.js </li>
+                <li> Processing.py </li>
+                <li> ruby-processing, JRubyArt</li>
+              </ul>
+            </section>
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+            <section>
+              <h3>Java things</h3>
+              <ul class="things">
+                <li class="fragment highlight-current-red" data-fragment-index="1">semicolons </li>
+                <li class="fragment highlight-current-red" data-fragment-index="2">curly braces </li>
+                <li class="fragment highlight-current-red" data-fragment-index="3">declared datatypes </li>
+                <li class="fragment highlight-current-red" data-fragment-index="4">declared return types </li>
+              </ul>
+              <div class="syntax fragment current" data-fragment-index="1">
+                <pre>
 
-		<!-- Code syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+                  <span class="fragment highlight-current-red" data-fragment-index="4">int</span> add(<span class="fragment highlight-current-red" data-fragment-index="3">int</span> n1, <span class="fragment highlight-current-red" data-fragment-index="3">int</span> n2) <span class="fragment highlight-current-red" data-fragment-index="2">{</span><br>
+                    <span class="fragment highlight-current-red" data-fragment-index="3">int</span> answer = n1 + n2<span class="fragment highlight-current-red" data-fragment-index="1">;</span><br>
+                    return answer<span class="fragment highlight-current-red" data-fragment-index="1">;</span>
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
+                  <span class="fragment highlight-current-red" data-fragment-index="2">}</span>
+                </pre>
+              </div>
 
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
+            </section>
 
-	<body>
+            <section>
+              <h2>Some Important functions</h2>
+              <pre>
+              <code class="hljs">
+                void draw() {
+                  ...
+                }
+              </code>
+              </pre>
 
-		<div class="reveal">
+              <div class="fragment" data-fragment-index="1">
+                <pre>
+                <code class="hljs">
+                  void setup() {
+                    ...
+                  }
+                </code>
+                </pre>
+              </div>
 
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-				<section>
-					<h1>Reveal.js</h1>
-					<h3>The HTML Presentation Framework</h3>
-					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
-					</p>
-				</section>
+            </section>
 
-				<section>
-					<h2>Hello There</h2>
-					<p>
-						reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
-					</p>
-				</section>
+            <section>
+              <h4>Shape</h4>
+              <pre>
+                <code class="hljs">
+                  line(x1, y1, x2, y2);
+                  ellipse(x, y, width, height);
+                </code>
+              </pre>
+              <div class="fragment" data-fragment-index="1">
+              <h4>Colour</h4>
+              <pre>
+                <code class="hljs">
+                  Color myColour = color(r, g, b);
+                  background(myColour);
+                  stroke(myColour);
+                  fill(myColour);
+                </code>
+              </pre>
+            </div>
+            </section>
 
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>Slides can be nested inside of each other.</p>
-						<p>Use the <em>Space</em> key to navigate through all slides.</p>
-						<br>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>That's it, time to go back up.</p>
-						<br>
-						<a href="#/2">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-				</section>
 
-				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slides.com" target="_blank">http://slides.com</a>.
-					</p>
-				</section>
+            <section data-background="#CDFBF9">
+              <div class="simple-example">
+                <pre>
+                  <code class="hljs">
+  color yellow = color(245, 245, 10);
+  color navy = color(25, 10, 100);
+  color blue = color(100,200,245);
 
-				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
-				</section>
+  void draw() {
+    background(blue);
 
-				<section>
-					<h2>Touch Optimized</h2>
-					<p>
-						Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
-					</p>
-				</section>
+    fill(yellow);
+    stroke(navy);
+    ellipse(50, 25, 25, 25);
+    
+    fill(navy);
+    ellipse(40, 22.5, 3, 3);
+    ellipse(55, 22.5, 4, 4);
 
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
+    line(50, 37.5, 50, 65);
+    
+    line(42.5, 50, 57.5, 50);
+    
+    line(50, 65, 55, 80);
+    line(50, 65, 45, 80);
+  }
+                  </code>
+                </pre>
 
-						Write content using inline or external Markdown.
-						Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
+                <img src="dude.png" alt="simple processing example">
+              </div>
+            </section>
+          </section>
 
-						```
-						<section data-markdown>
-						  ## Markdown support
+          <section class="examples" data-background="#f5f5f5">
+            <div class="example">
+              <pre>
+                <code class="hljs">
+  color[] colours = {#66CCFF, #5D6B70, #59a699, #DEFF69, #B1C2C9, #FFFFFF};
+  int colourCounter = 0;
+  int WINDOWSIZE = 450;
+  boolean started = false;
+  int opacity = 20;
+  color COLOUR;
 
-						  Write content using inline or external Markdown.
-						  Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-					</script>
-				</section>
 
-				<section>
-					<section id="fragments">
-						<h2>Fragments</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
+  void setup() {
+    size(WINDOWSIZE, WINDOWSIZE); 
+    frameRate(30);
+    strokeWeight(1);
+    fill(#FFFFFF, opacity);
 
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's different types of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment current-visible">current-visible</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
-					</section>
-				</section>
+    clearBackground();
+  }
 
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=slide#/transitions">Slide</a> -
-						<a href="?transition=convex#/transitions">Convex</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a>
-					</p>
-				</section>
-
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						reveal.js comes with a few themes built in: <br>
-						<!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a> <br>
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return false;">Blood</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
-					</p>
-				</section>
-
-				<section>
-					<section data-background="#dddddd">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code class="hljs">&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Tiled Backgrounds</h2>
-						<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-					</section>
-					<section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
-						<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
-							<h2>Video Backgrounds</h2>
-							<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
-						</div>
-					</section>
-					<section data-background="http://i.giphy.com/90F8aUepslB84.gif">
-						<h2>... and GIFs!</h2>
-					</section>
-				</section>
-
-				<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						Different background transitions are available via the backgroundTransition option. This one's called "zoom".
-					</p>
-					<pre><code class="hljs">Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
-				</section>
-
-				<section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						You can override background transitions per-slide.
-					</p>
-					<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
-				</section>
-
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code class="hljs" data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) {
-        node.className += ' roll';
-      }
+  void draw() {
+    if(started) {
+      stainedGlass();
     }
   }
-}
-					</code></pre>
-					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-				</section>
 
-				<section>
-					<h2>Marvelous List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
-				</section>
+  void mousePressed() {
+    if(!started) {
+       started = true;
+    }
+    clearBackground();
+  }
 
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
+  color getNextColour() {
+    colourCounter++;
+    colourCounter = colourCounter%colours.length;
+    return colours[colourCounter];
+  }
 
-				<section>
-					<h2>Tabular Tables</h2>
-					<table>
-						<thead>
-							<tr>
-								<th>Item</th>
-								<th>Value</th>
-								<th>Quantity</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Apples</td>
-								<td>$1</td>
-								<td>7</td>
-							</tr>
-							<tr>
-								<td>Lemonade</td>
-								<td>$2</td>
-								<td>18</td>
-							</tr>
-							<tr>
-								<td>Bread</td>
-								<td>$3</td>
-								<td>2</td>
-							</tr>
-						</tbody>
-					</table>
-				</section>
+  void clearBackground() {
+    background(#000000);
+  }
 
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
-				</section>
+  int r() {
+    return int(random(WINDOWSIZE));
+  }
 
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
+  void stainedGlass() {
+    fill(getNextColour(), 10);
 
-				<section>
-					<h2>Speaker View</h2>
-					<p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
-					<p>Press the <em>S</em> key to try it out.</p>
+    beginShape();
 
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
-				</section>
+      vertex(r(), r());
 
-				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's an example:</p>
-					<iframe src="https://www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
-				</section>
+      bezierVertex(r(), r(), r(), r(), r(), r());
 
-				<section>
-					<h2>Global State</h2>
-					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the page background.
-					</p>
-				</section>
+      bezierVertex(r(), r(), r(), r(), r(), r());
 
-				<section data-state="customevent">
-					<h2>State Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
-Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
+    endShape();
 
-				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
-					</p>
-				</section>
+  }
+                </code>
+              </pre>
 
-				<section>
-					<h2>Much more</h2>
-					<ul>
-						<li>Right-to-left support</li>
-						<li><a href="https://github.com/hakimel/reveal.js#api">Extensive JavaScript API</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#auto-sliding">Auto-progression</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#parallax-background">Parallax backgrounds</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#keyboard-bindings">Custom keyboard bindings</a></li>
-					</ul>
-				</section>
+              <canvas status="off" data-processing-sources="diptychA.pde"> </canvas>
+            </div>
+          </section>
 
-				<section style="text-align: left;">
-					<h1>THE END</h1>
-					<p>
-						- <a href="http://slides.com">Try the online editor</a> <br>
-						- <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
-					</p>
-				</section>
+          <section>
+          <section class="examples" data-background="#f5f5f5">
 
-			</div>
+            <div class="example">
+              <pre>
+                <code class="hljs">
+  int SIZE = 450;
+  boolean started = false;
+  Brush brush;
 
-		</div>
+  void setup() {
+    size(SIZE, SIZE);
+    strokeCap(SQUARE);
+    clearBackground();
+    strokeWeight(12);
+    brush = new Brush(random(SIZE), 20);
+  }
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+  void draw() {
+      if(started) {
+          brush.paint();
+      }
+  }
 
-		<script>
+  class Brush {
+    float x1, y1, x2, y2;
+    int mobility;
+    color colour;
+    color[] colours = {#FF8E64, #FF581A,#FF733F,#FFAD8E,#FFD3C3,#FFBC64,#FFE5C3,#FFCE8E};
+    int cindex;
+    int tr;
+    int baset = 5;
+    int tvar = 5;
 
-			// Full list of configuration options available at:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
+    Brush(float y1, int m) {
+      this.x1 = 0;
+      this.y1 = y1;
+      this.mobility = m;
+      this.tr = baset + int(random(-tvar, tvar));
+      this.cindex = 0;
+      getNextColour();
+    }
+    
+    void getNextColour() {
+      cindex++;
+      cindex = cindex % colours.length;
+      colour = colours[cindex]; 
+    }
+    
+    void move() {
+      y1 = y2;
+      y2 = y1 + random(-mobility, mobility);
 
-				transition: 'slide', // none/fade/slide/convex/concave/zoom
+      if(switchSides()) {
+        x1 = SIZE - x1;
+        getNextColour();
+      }
+      
+      if(y2 >= SIZE || y2 <= 0) { //stop it from jumping off canvas
+        y2 = random(0, SIZE);
+      }
+    }
+    
+    void setTransparency() {
+      tr = baset + int(random(-tvar, tvar));
+      stroke(colour, tr);
+    }
+    
+    void paint() {
+      setTransparency();
+      move();
+      drawLine();
+    }
 
-				// Optional reveal.js plugins
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true },
-					{ src: 'plugin/notes/notes.js', async: true }
-				]
-			});
+    void drawLine() {
 
-		</script>
+      float n = 20.0;
+      float xmid;
+      x2 = random(0, SIZE);
 
-	</body>
+      for(int i = 0; i < n; i++) {
+        xmid = x1 + ((1+i)*(x2-x1)/n);
+        line(x1, y1, xmid, y1);
+      }
+    }
+    
+  }
+
+  boolean switchSides() {
+    return random(100) > 99;
+  }
+
+  void clearBackground() {
+    background(#101010);
+  }
+
+  void mousePressed() {
+    clearBackground();
+    started = true;
+  }
+                </code>
+              </pre>
+
+              <canvas status="off" data-processing-sources="paint.pde"> </canvas>
+          </div>
+
+          </section>
+
+          <section data-background="#CDFBF9">
+            <div class="stuff">
+              <p>Try out Processing!</p>
+              <a href="https://processing.org/">processing.org</a> 
+
+              <p>Visit my sketchbook?</p>
+              <a href="natalieblack.github.io/gallery">natalieblack.github.io/gallery</a> 
+
+            </div>
+
+            <div class="otherstuff">
+              <p>Some relevant sites I enjoy:</p>
+                <p><a href="http://www.openprocessing.org/">openprocessing.org</a></p>
+                <p><a href="http://butdoesitfloat.com/index/filter/generative-art">butdoesitfloat.com</a></p>
+                <p><a href="http://computerneix.tumblr.com/">computerneix.tumblr.com</a></p>
+                <p><a href="http://mnununimune.com/">mnununimune.com</a></p>
+                <p><a href="http://codecartooning.tumblr.com/">codecartooning.tumblr.com</a></p>
+                <p><a href="http://blog.houseandbike.com/">blog.houseandbike.com</a></p>
+                <p><a href="https://vimeo.com/push1stop">vimeo.com/push1stop</a></p>
+                <p><a href="http://www.creativeapplications.net/">creativeapplications.net</a></p>
+            </div>
+          </section>
+
+          <section data-background="#CDFBF9">
+            <p>Thanks :)</p>
+          </section>
+        </section>
+
+          <section class="bloopers" data-background="#f5f5f5">
+
+            <div class="final fragment" data-fragment-index="1">
+              <canvas status="off" data-processing-sources="crazy_seaweed/wave.pde"> </canvas>
+              <canvas status="off" data-processing-sources="crazy_seaweed/tree.pde"> </canvas>
+              <canvas status="off" data-processing-sources="crazy_seaweed/paddles.pde"> </canvas>
+            </div>
+
+            <div class="blooper fragment" data-fragment-index="2">
+              <canvas status="off" data-processing-sources="shakinglines.pde"> </canvas>
+            </div>
+
+          </section>
+
+          <section class="bloopers floating" data-background="#555555">
+            <div class="final fragment" data-fragment-index="1">
+              <canvas status="off" data-processing-sources="floatingwords.pde"> </canvas>
+            </div>
+
+            <div class="blooper">
+              <canvas status="off" data-processing-sources="cowardcorner.pde" class="fragment" data-fragment-index="2"> </canvas>
+              <canvas status="off" data-processing-sources="tryingtofaceplant.pde" class="fragment" data-fragment-index="3"> </canvas>
+            </div>
+
+          </section>
+
+        <section data-background="#CDFBF9">
+          <div class="stuff">
+            <p>Try out Processing!</p>
+            <a href="https://processing.org/">processing.org</a> 
+
+            <p>Visit my sketchbook?</p>
+            <a href="natalieblack.github.io/gallery">natalieblack.github.io/gallery</a> 
+
+          </div>
+
+          <div class="otherstuff">
+            <p>Some relevant sites I enjoy:</p>
+              <p><a href="http://www.openprocessing.org/">openprocessing.org</a></p>
+              <p><a href="http://butdoesitfloat.com/index/filter/generative-art">butdoesitfloat.com</a></p>
+              <p><a href="http://computerneix.tumblr.com/">computerneix.tumblr.com</a></p>
+              <p><a href="http://mnununimune.com/">mnununimune.com</a></p>
+              <p><a href="http://codecartooning.tumblr.com/">codecartooning.tumblr.com</a></p>
+              <p><a href="http://blog.houseandbike.com/">blog.houseandbike.com</a></p>
+              <p><a href="https://vimeo.com/push1stop">vimeo.com/push1stop</a></p>
+              <p><a href="http://www.creativeapplications.net/">creativeapplications.net</a></p>
+          </div>
+        </section>
+
+        <section data-background="#CDFBF9">
+          <p>Thanks :)</p>
+        </section>
+
+        </div>
+      </div>
+
+      <script src="lib/js/head.min.js"></script>
+      <script src="js/reveal.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.4.16/processing.min.js"></script>
+      <script>
+        Reveal.initialize({
+          dependencies: [
+
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          // Interpret Markdown in <section> elements
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          // Syntax highlight for <code> elements
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          // Zoom in and out with Alt+click
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+          // Speaker notes
+          { src: 'plugin/notes/notes.js', async: true }
+
+          ]
+        });
+      </script>
+    </body>
 </html>

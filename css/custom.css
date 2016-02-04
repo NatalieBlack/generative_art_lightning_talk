@@ -1,0 +1,75 @@
+.reveal .slides img {
+  border: 0;
+  box-shadow: none;
+}
+
+.reveal blockquote {
+  border: 0;
+  box-shadow: none;
+  width: 1000px;
+}
+
+.reveal .slides img.plogo {
+  width: 300px;
+  height: 300px;
+}
+
+.reveal .syntax pre {
+  background: #3f3f3f;
+  color: #dcdcdc;
+}
+
+.reveal .syntax pre .current-fragment {
+  font-weight: 900;
+}
+
+.reveal .slides pre {
+  border: 0;
+  box-shadow: none;
+}
+
+.reveal .simple-example pre  {
+  width: 500px;
+  margin: 0px;
+}
+.reveal .simple-example pre code {
+  max-height: 700px;
+}
+
+.reveal .simple-example {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.reveal .example pre {
+  width: 500px;
+  margin: 20px;
+}
+
+.reveal .example pre code {
+  max-height: 600px;
+
+}
+.reveal .example {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bloopers .final {
+  display: inline-block;
+}
+
+.bloopers .blooper {
+  margin: 15px;
+}
+
+.reveal .otherstuff p {
+  font-size: 80%;
+  margin: 5px;
+}
+
+.reveal .stuff {
+  font-size: 90%;
+}
